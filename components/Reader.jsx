@@ -27,7 +27,7 @@ function Reader() {
   }
 
   const renderPreview = () => {
-    if (feed.status !== undefined) {return <Preview feed={feed}/>}
+    if (feed.status !== 'undefined') {return <Preview feed={feed}/>}
     else {
       return (
         <PlaceImages

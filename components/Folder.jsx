@@ -27,7 +27,7 @@ function Folder({ folder }) {
               className={classes.logo}
             />}
           </div>
-          <div><h4 className={classes.name}>{source.name}</h4></div>
+          <div className={classes.den}><h4 className={classes.name}>{source.name}</h4></div>
       </div>);
   }
 

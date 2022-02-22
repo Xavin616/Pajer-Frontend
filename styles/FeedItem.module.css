@@ -1,10 +1,10 @@
 .root {
     display: flex;
     flex-wrap: nowrap;
-    padding: 6.5px 15px;
+    padding: 5.5px 10px;
     justify-content: flex-start;
     align-items: center;
-    margin: 4px 0;
+    margin: 3px 0;
     transition: 0.1s;
     cursor: pointer;
 }
@@ -17,13 +17,13 @@
     background-color: rgba(211, 211, 211, 0.795);
     color: inherit;
     border-radius: 5px;
-    padding: 6.5px 14px 6.5px 8px;
+    padding: 5.5px 8px;
 }
 
 #dark {
     background-color: #000;
     color: white;
-    padding: 6.5px 14px 6.5px 8px;
+    padding: 5.5px 8px;
     border-radius: 5px;
 }
 
@@ -34,7 +34,7 @@
 .index {
     width: 13%;
     height: 100%;
-    margin-right: 4px;
+    margin-right: 3px;
 }
 
 .id {
