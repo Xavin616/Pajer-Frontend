@@ -1,0 +1,40 @@
+.root {
+    padding: 20px 45px;
+    top: 0;
+    height: 100%;
+    position: absolute;
+    overflow: hidden auto;
+}
+
+.header {
+    margin-bottom: 15px;
+    padding: 5px
+}
+
+.title {
+    font-size: 22px;
+    font-weight: bolder;
+}
+
+.body {
+    padding: 10px 20px 10px 10px;
+}
+
+.button {
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    width: 90px;
+    height: 35px;
+    padding: -5px 10px;
+    color: white;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 30px 155px;
+    cursor: pointer;
+    background-color: black;
+}
+
+.button:hover {
+    background-color: #000;
+}

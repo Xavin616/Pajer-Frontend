@@ -1,0 +1,14 @@
+.root {
+    position: absolute;
+    overflow: hidden auto;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 5px 5px 5px 8px;
+}
+
+.main {
+    height: 100%;
+    width: inherit;
+    padding: 4px;
+}

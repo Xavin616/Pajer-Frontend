@@ -1,0 +1,42 @@
+.root {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 7px 4px 4px 10.5px;
+    cursor: pointer;
+    margin: 4px 0;
+    width: 95%;
+}
+
+.img {
+    margin-right: 7px;   
+}
+
+.logo {
+    border-radius: 3px;
+}
+
+.name {
+    font-size: 14px;
+}
+
+#normal {
+    background-color: white;
+}
+
+#normal:hover {
+    background-color: rgba(211, 211, 211, 0.795);
+    color: inherit;
+    border-radius: 5px;
+    padding: 7px 4px 4px 12.5px;
+}
+
+/*alternate color: #031926*/
+
+#dark {
+    padding: 7px 4px 4px 12.5px;
+    background-color: #000;
+    color: white;
+    border-radius: 5px;
+    box-shadow: -4px 4px 0px #FAFF00;
+}

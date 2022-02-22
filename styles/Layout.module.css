@@ -1,0 +1,18 @@
+.main {
+    display: grid;
+    grid-template-rows: 55px 2fr;
+    height: 100vh;
+    position: relative;
+}
+
+.body {
+    padding-top: 12px;
+    display: grid;
+    grid-template-columns: 5% 20% 75%;
+    position: relative;
+}
+
+.subBody {
+    position: relative;
+    width: 100%;
+}

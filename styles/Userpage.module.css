@@ -1,0 +1,8 @@
+.root {
+    position: absolute;
+    overflow: hidden auto;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
