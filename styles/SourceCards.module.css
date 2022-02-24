@@ -30,9 +30,10 @@
     cursor: pointer;
     outline: none;
     border: none;
-    background-color: #ff9914;
+    background-color: #000000;
     color: white;
     font-size: 12px;
+    font-weight: bold;
     border-radius: 5px;
     padding: 3px 12px;
 }

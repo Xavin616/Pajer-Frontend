@@ -5,7 +5,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Lato', sans-serif;
-  color: #1f1f1fad;
+  color: #1f1f1fef;
   font-weight: normal;
   position: relative;
 }
@@ -26,4 +26,26 @@ h1, h2, h3, h4, h5, h6 {
 
 input {
   background-color: #faff0047
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track { 
+  background: rgba(128, 128, 128, 0.158);;
+}
+
+::-webkit-scrollbar-track:hover { 
+  background: rgba(255, 255, 0, 0.356);
+  width: 8px
 }
