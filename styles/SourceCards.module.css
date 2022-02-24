@@ -1,0 +1,35 @@
+.root {
+    color: white;
+    margin: 6px 5px;
+    display: flex;
+    padding: 7px 12px;
+    background-color: black;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.body {
+    margin: 0px 2px 0px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    margin-left: 6px;
+    font-weight: bold;
+}
+
+.icon {
+    border-radius: 3px;
+}
+
+.add {
+    margin-left: 10px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: #c1c42c;
+    color: white;
+    border-radius: 5px;
+    padding: 2px 5px;
+}

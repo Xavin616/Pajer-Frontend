@@ -6,7 +6,7 @@ import { setFeed } from '../lib/feed';
 
 function FeedList({ feeds }) {
   const [current, setCurrent] = useState(100);
-  const colors = ['#1eff00', '#ff9914', '#f21b3f', '#08bdbd', '#faff00']
+  const colors = ['#faff00', '#1eff00', '#ff9914', '#f21b3f', '#08bdbd']
   const sourceId = useSelector((state) => state.sourceState.source.id)
 
   useEffect(() => {

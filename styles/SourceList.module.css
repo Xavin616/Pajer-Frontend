@@ -1,5 +1,5 @@
 .root {
-    margin: 0px 5px;
+    margin: 5px 5px;
     padding: 5px 0px;
 }
 
@@ -9,7 +9,7 @@
 }
 
 .head {
-    font-size: 1.8em;
+    font-size: 1.5em;
     font-weight: bolder;
 }
 

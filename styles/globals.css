@@ -5,6 +5,7 @@ body {
   font-family: Roboto, sans-serif;
   color: #252525;
   font-weight: normal;
+  position: relative;
 }
 
 a {
@@ -19,4 +20,8 @@ a {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: normal;
+}
+
+input {
+  background-color: #faff0047
 }

@@ -1,10 +1,14 @@
 import { useState, useEffect } from 'react';
-import styles from '../styles/Login.module.css';
 import { useLoginUserMutation } from '../lib/userSlice';
 import { useRouter } from 'next/router'
+import { setUser } from '../lib/userReducer';
+import { useDispatch } from 'react-redux';
+import styles from '../styles/Login.module.css';
+import Image from 'next/image';
 
 function Login() {
     const router = useRouter()
+    const dispatch = useDispatch()
     const [loginUser, {data, isLoading, error}] = useLoginUserMutation()
     const [formData, setFormData] = useState({
         password: "",
@@ -15,12 +19,13 @@ function Login() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log(formData)
         await loginUser(formData)
     }
 
     useEffect(() => {
         if (data && data.auth_token) {
-            console.log(data);
+            dispatch(setUser(data))            
             localStorage.setItem('login', 
                 JSON.stringify({
                     isAuthenticated: true,
@@ -29,33 +34,51 @@ function Login() {
             router.push("/reader")
         }
 
-    }, [data, isLoading, router]);
+    }, [data, isLoading, dispatch, router]);
 
 
 
     return(
-        <div>
-            <form onSubmit={handleSubmit} action="post">
-                <label htmlFor="username">
-                    <input 
-                        type="text" 
-                        name="username" 
-                        placeholder="Username"
-                        value={formData.username}
-                        onChange={(e) => setFormData({ ...formData, username: e.target.value})}
+        <div className={styles.main}>
+            <div className={styles.root}>
+                <div className={styles.logoholder}>
+                    <Image
+                        src={'/pajer.png'}
+                        alt={'pajer'}
+                        height={50}
+                        width={198}
                     />
-                </label>
-                <label htmlFor="password">
-                    <input 
-                        type="text" 
-                        name="password" 
-                        placeholder="Password" 
-                        value={formData.password}
-                        onChange={(e) => setFormData({ ...formData, password: e.target.value})}
-                    />
-                </label>
-                <button type="submit">Submit</button>
-            </form>
+                </div>
+                <form onSubmit={handleSubmit} action="post">
+                    <div className={styles.formControl}>
+                        <label htmlFor="username">
+                            Username
+                        </label>
+                            <input 
+                                className={styles.input}
+                                type="text" 
+                                name="username" 
+                                placeholder="Username"
+                                value={formData.username}
+                                onChange={(e) => setFormData({ ...formData, username: e.target.value})}
+                            />
+                    </div>
+                    <div className={styles.formControl}>
+                        <label htmlFor="password">
+                            Password
+                        </label>
+                            <input
+                                className={styles.input} 
+                                type="password" 
+                                name="password" 
+                                placeholder="Password" 
+                                value={formData.password}
+                                onChange={(e) => setFormData({ ...formData, password: e.target.value})}
+                            />
+                    </div>
+                    <button className={styles.button} type="submit">Submit</button>
+                </form>
+            </div>
         </div>
     );
 }
