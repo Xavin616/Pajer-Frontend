@@ -16,10 +16,10 @@ function Layout({ children }) {
   useEffect(()=>{
     if (userState.isAuthenticated === false) {
       let login = typeof window !== 'undefined' ? localStorage.getItem('login') : null
-      if (login === null) { router.push('/reader')}
+      if (login === null) {  router.push('/login')}
       else { 
         dispatch(setUser(JSON.parse(login))); 
-        router.push('/login')
+        router.push('/reader')
       }
     }}, [ router, dispatch, userState ]);
 

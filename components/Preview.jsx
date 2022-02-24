@@ -43,7 +43,7 @@ function Preview({ feed }) {
     <div className={styles.root}>
       <div className={styles.header}>
         <div className={styles.title}>
-          <h3 style={{fontWeight: 'bolder',textShadow: `-2px 0.8px 0px ${feed.color}`}}>{feed.title}</h3>
+          <h3 style={{fontWeight: 'bolder',textShadow: `-1.6px 0.5px 0px ${feed.color}`}}>{feed.title}</h3>
         </div>
       </div>
       <div className={styles.body}>

@@ -7,13 +7,13 @@ function SourceCards({ name, id, src }) {
     return (
         <div className={classes.root}>
             <div className={classes.body}>
-                <Image src={src} alt={name} className={classes.icon} height={20} width={20} />
+                <Image src={src} alt={name} className={classes.icon} height={23} width={23} />
                 <h5 className={classes.title}>
                     {name}
                 </h5>
             </div>
             <div className={classes.attachment}>
-                <button className={classes.add}>Add</button>
+                <button className={classes.add}>Follow</button>
             </div>
         </div>
     )

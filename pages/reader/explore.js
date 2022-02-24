@@ -7,11 +7,11 @@ function Explore() {
   const { data, error } = useGetCategoriesQuery();
 
   return (
-    <>
+    <div className="explore">
       <Head><title>Explore</title></Head>
       <CategoryList categories={data}/>
       <SourceList />
-    </>
+    </div>
   );
 }
 

@@ -1,15 +1,17 @@
 .root {
-    margin: 5px 5px;
+    margin: 5px 20px;
     padding: 5px 0px;
+    width: 97%;
 }
 
 .header {
-    margin: 5px 5px;
+    margin: 0px 5px;
     padding: 0px 2px;
 }
 
 .head {
-    font-size: 1.5em;
+    font-size: 1.4em;
+    color: #000;
     font-weight: bolder;
 }
 
@@ -17,6 +19,6 @@
     display: flex;
     margin: 8px 10px;
     width: 90%;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }

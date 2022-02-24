@@ -1,11 +1,13 @@
 .root {
-    color: white;
-    margin: 6px 5px;
+    color: #000;
+    margin: 8px 27px 10px 0px ;
     display: flex;
-    padding: 7px 12px;
-    background-color: black;
+    justify-content: space-between;
+    padding: 8px 8px;
+    background-color: inherit;
     align-items: center;
-    border-radius: 8px;
+    width: 29.5%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.096);
 }
 
 .body {
@@ -16,7 +18,7 @@
 
 .title {
     margin-left: 6px;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .icon {
@@ -24,12 +26,13 @@
 }
 
 .add {
-    margin-left: 10px;
+    margin-left: 12px;
     cursor: pointer;
     outline: none;
     border: none;
-    background-color: #c1c42c;
+    background-color: #ff9914;
     color: white;
+    font-size: 12px;
     border-radius: 5px;
-    padding: 2px 5px;
+    padding: 3px 12px;
 }

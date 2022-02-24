@@ -1,16 +1,18 @@
 .root {
-    margin: 0px 5px;
+    margin: 0px 20px;
     padding: 5px 0px;
+    width: 90%;
 }
 
 .header {
-    margin: 5px 5px;
+    margin: 0px 5px;
     padding: 0px 2px;
 }
 
 .head {
-    font-size: 1.8em;
+    font-size: 1.4em;
     font-weight: bolder;
+    color: #000;
 }
 
 .container {
