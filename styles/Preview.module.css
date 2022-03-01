@@ -26,12 +26,12 @@
     border: none;
     border-radius: 8px;
     width: 90px;
-    height: 35px;
+    height: 32px;
     padding: -5px 10px;
     color: white;
     font-size: 13px;
     font-weight: bold;
-    margin: 5px 155px;
+    margin: 15px 155px;
     cursor: pointer;
     background-color: black;
 }

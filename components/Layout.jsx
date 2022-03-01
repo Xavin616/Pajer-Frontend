@@ -24,6 +24,7 @@ function Layout({ children }) {
     }}, [ router, dispatch, userState ]);
 
   const { data, error } = useGetMyPageQuery();
+  console.log(data);
 
   const renderPage = () => {
     if (data) {

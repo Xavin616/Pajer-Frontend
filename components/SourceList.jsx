@@ -26,7 +26,7 @@ function SourceList() {
 
     const renderView = () => {
         if (data && data.length > 0) {
-            return data.map((e,i) => {
+            return (data.slice(0,9)).map((e,i) => {
                 return <SourceCards src={e.icon} name={e.name} id={e.id} key={i}/>
             })
         } else return <>Empty</>

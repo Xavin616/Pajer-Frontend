@@ -4,7 +4,7 @@ import Folder from './Folder';
 function Userpage({ folders }) {
   return (
     <div className={styles.root}>
-      <Folder folder={folders}/>
+      {folders.map((e,i) => <Folder key={i} folder={e}/>)}
     </div>);
 }
 

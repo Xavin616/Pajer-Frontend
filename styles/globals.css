@@ -29,7 +29,7 @@ input {
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -37,15 +37,6 @@ input {
   border-radius: 10px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  width: 10px;
-}
-
 ::-webkit-scrollbar-track { 
-  background: rgba(128, 128, 128, 0.158);;
-}
-
-::-webkit-scrollbar-track:hover { 
-  background: rgba(255, 255, 0, 0.356);
-  width: 8px
+  background: rgba(255, 255, 0, 0.354); 
 }
