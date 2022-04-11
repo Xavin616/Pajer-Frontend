@@ -1,0 +1,189 @@
+.main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body {
+    padding: 40px;
+    position: relative;
+    width: 90%;
+    min-width: 200px;
+    max-width: 400px;
+    min-height: 70%;
+    max-height: 80%;
+    overflow: hidden auto;
+    background-color: #fff;   
+}
+
+.cancel {
+    position: absolute;
+    bottom: 30px;
+    right: 35px;
+    background-color: black;
+    box-shadow: -3px 3px 0 yellow;
+    border: none;
+    padding: 0px;
+    height: 32px;
+    width: 80px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.95rem;
+    border-radius: 5px;
+}
+
+.cancel:hover {
+    background-color: red;
+    box-shadow: -3px 3px 0 black;
+}
+
+.header {
+    color: black;
+    text-shadow: -1px 2px 0 yellow;
+    margin: 10px 0;
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+.head {
+    margin: 17.5px 0 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.sourcecard {
+    width: 100%;
+    height: inherit;
+    display: flex;
+    margin: 5px auto;
+    justify-content: center;
+}
+
+.icon {
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.sourcename {
+    margin: 0 13px;
+}
+
+.name {
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.sourcename > span {
+    font-size: 0.7em;
+    margin-top: 10px;
+    color: rgba(128, 128, 128, 0.822);
+}
+
+.title {
+    color: black;
+    text-shadow: -1px 2px 0 yellow;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.close {
+    font-size: 1.1rem; 
+    background: transparent;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 8px;
+    font-weight: bold;
+    left: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.close:hover {
+    background-color: #FF9914;
+    color: white;
+    border: 0.1px solid rgba(128, 128, 128, 0.055);
+}
+
+.mainFolder {
+    margin: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.folder {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+}
+
+.add {
+    cursor: pointer;
+    height: 75%;
+    width: 60px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color:black;
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.add:hover {
+    background-color: #ff9914;
+}
+
+.folderName {
+    margin: 0 8px;
+}
+
+.folderName > h4 {
+    font-weight: bold;
+}
+
+.create {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5px 0;
+    align-items: center;
+}
+
+.create > h4 {
+    color: black;
+    text-shadow: -1px 2px 0 yellow;
+    margin: 10px 10px 10px 0;
+    font-weight: bolder;
+    font-size: 1.1rem;
+}
+
+.createButton {
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    text-shadow: -1px 1px 0 yellow;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    height: 25px;
+    width: 25px;
+    box-shadow: -2px 2px 0 yellow
+}
+
+.createButton:hover {
+    color: black;
+    background-color: yellow;
+    box-shadow: -2px 2px 0 black;
+}

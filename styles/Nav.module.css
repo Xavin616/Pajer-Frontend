@@ -7,3 +7,42 @@
     position: relative;
     box-shadow: 0px 8px 14px #fbff1727;
 }
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menuItem {
+    display: flex;
+    align-items: center;
+    margin: 0 15px 0 30px;
+    color: black;
+    font-weight: bold;
+}
+
+.menuItem > h5 {
+    font-size: 0.95rem;
+}
+
+.logout {
+    background-color: black;
+    border: none;
+    width: 65px;
+    height: 30px;
+    font-weight: bolder;
+    border-radius: 7px;
+    color: white;
+    box-shadow: -3px 3px 0 yellow;
+}
+
+.logout:hover {
+    background-color: red;
+}
+
+.logout:focus, .logout:active {
+    width: 63px;
+    height: 28px;
+    background-color: red;
+    box-shadow: none;
+}

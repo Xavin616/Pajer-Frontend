@@ -9,8 +9,8 @@ import Image from 'next/image';
 function Register() {
   const router = useRouter()
   const dispatch = useDispatch()
-  //const [loginUser, {data, isLoading, error}] = useLoginUserMutation();
-  const [registerUser, {datum}] = useRegisterUserMutation();
+  const [loginUser, {data, isLoading, error}] = useLoginUserMutation();
+  const [registerUser] = useRegisterUserMutation();
   const [formData, setFormData] = useState({
       username: "",
       email: "",
@@ -21,12 +21,23 @@ function Register() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         console.log(formData)
-        await registerUser(formData);
+        registerUser(formData)
+            .then(() => {
+                loginUser({username: formData.username, password: formData.password})
+            });
     }
 
     useEffect(() => {
-      console.log(datum)        
-    }, [datum]);
+        if (data && data.auth_token) {
+            dispatch(setUser(data))            
+            localStorage.setItem('login', 
+                JSON.stringify({
+                    isAuthenticated: true,
+                    auth_token: data.auth_token,
+                }))
+            router.push("/reader")
+        }
+    }, [data, isLoading, dispatch, router])
 
     return (
       <div className={styles.main}>

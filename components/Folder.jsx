@@ -1,13 +1,22 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from '../styles/Folder.module.css';
 import Image from 'next/image';
 import classes from '../styles/Source.module.css'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setSource } from '../lib/source';
+import { useRouter } from 'next/router';
 
-function Folder({ folder }) {
+function Folder({ folder, open }) {
+  //const [newOpen, setOpen] = useState(open)
   const [current, setCurrent] = useState(100);
   const sources = folder.sources
+  const sourceSelect = useSelector((state) => state.sourceState.source)
+  const router  = useRouter()
+  let location;
+
+  if (router.asPath === '/reader') { location = ''}
+  else (location = '/reader')
+
 
   function Source({ source, style }) {
     const dispatch = useDispatch()
@@ -16,7 +25,7 @@ function Folder({ folder }) {
       <div
         id={style === -2 ? classes.normal : classes.dark } 
         className={classes.root}
-        onClick={() => {setCurrent(source.id); dispatch(setSource(source))}}
+        onClick={() => {dispatch(setSource(source))}}
       >
           <div className={classes.img}>
             {<Image
@@ -34,15 +43,19 @@ function Folder({ folder }) {
   const renderSources = () => {
     return sources.map((e,i) => 
         <Source 
-          style={e.id === current ? -3 : -2 }
+          style={e.id === sourceSelect.id ? -3 : -2 }
           key={i} 
           source={e} 
         />
       )
   }
 
+
   return (
-    <div className={styles.root}>
+    <div 
+      //onClick={() => {setOpen(folder.id); console.log(newOpen)}} 
+      className={styles.root}
+    >
       <div className={styles.folder}>
         <Image 
           src={'/folder.png'} 
@@ -53,9 +66,7 @@ function Folder({ folder }) {
         />
         <h3 className={styles.name}>{folder.name}</h3>
       </div>
-      <div className={styles.drawer}>
-        {renderSources()}
-      </div>
+      <div className={styles.drawer}>{renderSources()}</div>
     </div>);
 }
 

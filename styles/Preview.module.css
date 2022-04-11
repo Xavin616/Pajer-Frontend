@@ -4,6 +4,7 @@
     height: 100%;
     position: absolute;
     overflow: hidden auto;
+    width: 100%;
 }
 
 .header {
@@ -18,7 +19,20 @@
 }
 
 .body {
+    width: 98%;
     padding: 10px 20px 10px 10px;
+}
+
+.body > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.injected {
+    width: 100%;
 }
 
 .button {
@@ -31,7 +45,9 @@
     color: white;
     font-size: 13px;
     font-weight: bold;
-    margin: 15px 155px;
+    position: relative;
+    margin-top: 25px;
+    margin-bottom: 10px;
     cursor: pointer;
     background-color: black;
 }

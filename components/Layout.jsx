@@ -2,7 +2,8 @@ import styles from '../styles/Layout.module.css';
 import Nav from './Nav';
 import Sidebar from './Sidebar';
 import Userpage from './Userpage';
-import { useGetMyPageQuery } from '../lib/apiSlice';
+import PlaceImages from './PlaceImages';
+import { useGetMyPageQuery, useGetUserDataQuery } from '../lib/apiSlice';
 import { useSelector, useDispatch } from 'react-redux'
 import { setUser } from '../lib/userReducer';
 import { useRouter } from 'next/router';
@@ -24,6 +25,7 @@ function Layout({ children }) {
     }}, [ router, dispatch, userState ]);
 
   const { data, error } = useGetMyPageQuery();
+
   console.log(data);
 
   const renderPage = () => {
@@ -31,7 +33,14 @@ function Layout({ children }) {
       return <Userpage folders={data} />
     } else if (error) {
       return <div>ERROR!!</div>
-    } else {return <div>LOADING!!!</div>}
+    } else {
+        return( 
+              <PlaceImages 
+                src={'/Position.gif'} 
+                alt="search" 
+                words=""
+              />)
+            }
   }
 
   return (

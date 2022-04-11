@@ -19,9 +19,9 @@ function Reader({ feed, data, error }) {
     } 
     else {return (
         <PlaceImages 
-          src={'/undraw-search.svg'} 
+          src={'/Position.gif'} 
           alt="search" 
-          words="Searching!"
+          words=""
         />)
       }
   }

@@ -2,19 +2,25 @@ import styles from '../styles/Preview.module.css';
 import { useEffect } from 'react';
 
 function Preview({ feed }) {
-  const styled = {backgroundColor: feed.color,}
-  const styledd = () => {return feed.color === 'black'} 
-
+  
   useEffect(() => {
     const preview = document.getElementById('preview')
+    const feedflare = document.getElementsByClassName('feedflare')[0]
+
+    if (feedflare && feedflare.length > 0) { 
+      feedflare.style.display = 'none'
+    }
+
     let list  = preview.querySelectorAll('img')
     let plist = preview.querySelectorAll('p')
     let li = preview.querySelectorAll('li')
     let h3 = preview.querySelectorAll('h3')
     let h1 = preview.querySelectorAll('h1')
+    let h2 = preview.querySelectorAll('h2')
     console.log(preview)
     for (let i = 0; i < list.length; i++) {
-      list[i].style.width = '100%'
+      list[i].style.maxHeight= '250px'
+      list[i].style.width = 'auto'
     }
     for (let i = 0; i < plist.length; i++) {
       plist[i].style.marginTop = '5px'
@@ -33,8 +39,13 @@ function Preview({ feed }) {
     }
 
     for (let i = 0; i < h1.length; i++) {
-      h1[i].style.fontSize = '16px'
+      h1[i].style.fontSize = '17px'
       h1[i].style.lineHeight = '22px'
+    }
+
+    for (let i = 0; i < h2.length; i++) {
+      h2[i].style.fontSize = '17px'
+      h2[i].style.lineHeight = '22px'
     }
   }, [feed])
   
@@ -47,11 +58,10 @@ function Preview({ feed }) {
         </div>
       </div>
       <div className={styles.body}>
-        <div id='preview' className={styles.injected} dangerouslySetInnerHTML={{__html: feed.description}} />
+        <div id='preview' className={styles.injected} dangerouslySetInnerHTML={{__html: (feed.content === "null" ? feed.description : feed.content[0].value)}} />
         <a href={feed.link} target="_blank" rel="noopener noreferrer">
           <button 
             className={styles.button} 
-            //onClick={() => {styledd()}}
           >
             Read More
           </button>
