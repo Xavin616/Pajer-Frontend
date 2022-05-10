@@ -1,6 +1,6 @@
 .main {
     display: grid;
-    grid-template-rows: 55px 2fr;
+    grid-template-rows: 65px 2fr;
     height: 100vh;
     position: relative;
 }
@@ -8,7 +8,7 @@
 .body {
     padding-top: 12px;
     display: grid;
-    grid-template-columns: 5% 21% 74%;
+    grid-template-columns: 6% 20% 74%;
     position: relative;
 }
 

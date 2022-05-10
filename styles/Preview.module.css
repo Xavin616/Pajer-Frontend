@@ -1,5 +1,5 @@
 .root {
-    padding: 20px 45px;
+    padding: 5px 30px;
     top: 0;
     height: 100%;
     position: absolute;
@@ -8,19 +8,44 @@
 }
 
 .header {
-    margin-bottom: 5px;
-    padding: 5px
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-items: center;
+    border-bottom: 1px solid rgb(220, 220, 220);
+}
+
+.image {
+    width: 13%;
+    max-width: 55px;
+    min-width: 45px;
+    display: block;
+}
+
+.img {
+    border-radius: 5px;
 }
 
 .title {
-    font-size: 20px;
-    font-weight: bolder;
+    margin: 0px 0px 0px 10px;
+    line-height: 20px;
+    font-weight: 400;
     color: #000;
+}
+
+.title > h3 {
+    font-size: 1.01rem;
+}
+
+.date {
+    font-size: 0.7rem;
 }
 
 .body {
     width: 98%;
-    padding: 10px 20px 10px 10px;
+    padding: 10px 10px 10px 10px;
 }
 
 .body > a {

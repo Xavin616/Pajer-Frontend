@@ -2,10 +2,10 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 5px 4px 2px 9px;
+    padding: 5px 4px 2px 15px;
     cursor: pointer;
     margin: 4px 0;
-    width: 95%;
+    width: 85%;
 }
 
 .img {
@@ -22,6 +22,7 @@
 
 #normal {
     background-color: white;
+    transition: 0.5s;
 }
 
 #normal:hover {
@@ -34,7 +35,7 @@
 /*alternate color: #031926*/
 
 #dark {
-    padding: 5px 4px 2px 9px;
+    padding: 6px 4px 2px 12px;
     background-color: #000;
     color: white;
     border-radius: 5px;

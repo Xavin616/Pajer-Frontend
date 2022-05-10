@@ -15,7 +15,7 @@
     position: relative;
     width: 90%;
     min-width: 200px;
-    max-width: 400px;
+    max-width: 425px;
     min-height: 70%;
     max-height: 80%;
     overflow: hidden auto;
@@ -154,10 +154,12 @@
 }
 
 .create {
+    width: 100%;
     display: flex;
-    justify-content: space-evenly;
-    margin: 5px 0;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 10px 0;
+    align-items: flex-start;
 }
 
 .create > h4 {
@@ -165,25 +167,19 @@
     text-shadow: -1px 2px 0 yellow;
     margin: 10px 10px 10px 0;
     font-weight: bolder;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
 }
 
-.createButton {
-    cursor: pointer;
-    color: white;
-    background-color: black;
-    border-radius: 50%;
-    text-shadow: -1px 1px 0 yellow;
+.createform {
+    display: flex;
+    justify-content: space-between;
+}
+
+.createform > input {
     border: none;
-    font-size: 1.2rem;
-    font-weight: bolder;
-    height: 25px;
-    width: 25px;
-    box-shadow: -2px 2px 0 yellow
-}
-
-.createButton:hover {
-    color: black;
-    background-color: yellow;
-    box-shadow: -2px 2px 0 black;
+    width: 75%;
+    height: 40px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    border-radius: 10px;
 }

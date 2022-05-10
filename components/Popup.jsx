@@ -1,8 +1,9 @@
 import Image from 'next/image'
 import styles from '../styles/Popup.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { useGetMyPageQuery, getMyPage } from '../lib/apiSlice'
+import { useGetMyPageQuery } from '../lib/apiSlice'
 import { useAddSourceQuery, addSource } from '../lib/addSlice';
+import { useState } from 'react';
 
 function Popup({ source, trigger, setTrigger }) {
   const dispatch = useDispatch();
@@ -12,7 +13,9 @@ function Popup({ source, trigger, setTrigger }) {
     const pk = source.id
     const { refetch } = useGetMyPageQuery()
 
-    const add = async (id, pk) => {
+    const [word, setWording] = useState("Add")
+
+    const add = (id, pk) => {
       dispatch(addSource.initiate({id, pk}))
       refetch()
     }
@@ -30,8 +33,8 @@ function Popup({ source, trigger, setTrigger }) {
             <h4>{name}</h4>
           </div>
         </div>
-        <button onClick={() => add(id, pk)} className={styles.add}>
-          Add
+        <button onClick={() => {setWording("Added"); add(id, pk)}} className={styles.add}>
+          {word}
         </button>
       </div>
     )
@@ -71,10 +74,10 @@ function Popup({ source, trigger, setTrigger }) {
               <div className={styles.mainFolder}>
                 <div className={styles.create}>
                   <h4>Create New Folder</h4>
-                  <button className={styles.createButton}>
-                    +
-                  </button>
-                  
+                  <div className={styles.createform}>
+                    <input type="text" placeholder='New Folder'/>
+
+                  </div>                  
                 </div>
               </div>
             </div>

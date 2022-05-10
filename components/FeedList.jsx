@@ -3,15 +3,16 @@ import classes from '../styles/FeedItem.module.css';
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setFeed } from '../lib/feed';
+import Image from 'next/image';
 
 function FeedList({ feeds }) {
   const [current, setCurrent] = useState(100);
   const colors = ['#faff00', '#1eff00', '#ff9914', '#f21b3f', '#08bdbd']
-  const sourceId = useSelector((state) => state.sourceState.source.id)
+  const source = useSelector((state) => state.sourceState.source)
 
   useEffect(() => {
     setCurrent(100)
-  }, [sourceId])
+  }, [source.id])
   
 
   function FeedItem({ feed, classId, color }) {
@@ -24,7 +25,7 @@ function FeedList({ feeds }) {
 
     let shadow;
     classId === -3 ? shadow = shadow1 : shadow = shadow2
-
+    
     return (
       <div
         tabIndex={1}
@@ -58,8 +59,21 @@ function FeedList({ feeds }) {
   }
 
   return (
-    <div className={styles.main}>
-      <div className={styles.root}>
+    <div className={styles.root}>
+      {/* <div className={styles.header}>
+        <div className={styles.sourceIcon}>
+          <Image
+            src={source.icon}
+            alt={source.name}
+            width={35}
+            height={35}
+          />
+        </div>
+        <div className={styles.source}>
+          <h3>Now on {source.name}</h3>
+        </div>
+      </div> */}
+      <div className={styles.main}>
         {renderFeed()}
       </div>
     </div>

@@ -1,14 +1,22 @@
 .root {
-    position: absolute;
+    height: 100%;
+    width: 1005;
+    padding: 4px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 2.5px 10px;
+    font-weight: bolder;
+    justify-content: flex-start;
+    font-size: 0.9rem;
+}
+
+.main {
     overflow: hidden auto;
     height: 100%;
     top: 0;
     left: 0;
     padding: 5px 5px 5px 8px;
-}
-
-.main {
-    height: 100%;
-    width: inherit;
-    padding: 4px;
 }
